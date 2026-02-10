@@ -42,5 +42,6 @@ namespace StudentAndFA
                 throw new ArgumentOutOfRangeException("Попытка присвоивить нулевую стипендию");
             else return grant;
         }
+        public override string ToString() => Dean + " " + NameOfFaculty + " " + PhoneNumber;
     }
 }

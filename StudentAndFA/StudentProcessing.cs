@@ -8,7 +8,7 @@ namespace StudentAndFA
 {
     internal static class StudentProcessing
     {
-        public static string[] TakingStringFromFile(string fileName)
+        public static string[] TakingStringAboutStudentsFromFile(string fileName)
         {
             try
             {
@@ -17,10 +17,10 @@ namespace StudentAndFA
             }
             catch(FileNotFoundException ex)
             {
-                throw new Exception("Файл не найден.", ex);
+                throw new Exception("Не найден файл, который хранит в себе информацию о студентах.", ex);
             }
         }
-        public static void DivisionIntoFields(string[] parts, out string[] surnames, out string[] nameFaculty, out double[] grant, out uint[][] marks)
+        public static void SplittingStudentInformationIntoFields(string[] parts, out string[] surnames, out string[] nameFaculty, out double[] grant, out uint[][] marks)
         {
             surnames = new string[parts.Length];
             nameFaculty = new string[parts.Length];
