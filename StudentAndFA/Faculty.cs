@@ -1,6 +1,4 @@
-﻿using StudentAndFa;
-
-namespace StudentAndFA
+﻿namespace StudentAndFaculty
 {
     internal class Faculty
     {

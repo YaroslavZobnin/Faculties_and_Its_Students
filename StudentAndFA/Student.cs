@@ -1,6 +1,4 @@
-﻿using StudentAndFA;
-
-namespace StudentAndFa
+﻿namespace StudentAndFaculty
 {
     internal delegate void BonusEventHandler(double bonusGrant);
     internal class Student

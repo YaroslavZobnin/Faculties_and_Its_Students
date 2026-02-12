@@ -1,4 +1,4 @@
-﻿namespace Student
+﻿namespace StudentAndFaculty
 {
     internal class Program
     {

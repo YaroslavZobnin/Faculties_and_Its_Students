@@ -1,4 +1,4 @@
-﻿namespace StudentAndFA
+﻿namespace StudentAndFaculty
 {
     internal static class FacultyProcessing
     {
