@@ -21,6 +21,21 @@
                 throw new NullReferenceException("Нет оценок.");
            }
         }
+        public float AverageMark
+        {
+            get
+            {
+                if(marks != null)
+                {
+                    float res = 0;
+                    foreach (var mark in marks)
+                        res += mark;
+                    return res / 5;
+                }
+                else
+                    throw new NullReferenceException("Оценок нет.");
+            }
+        }
         public string? Surname => surname;
         public string? NameFaculty => nameFaculty;
         public double? Grant => grant;
@@ -49,7 +64,7 @@
             return $"{surname}, {nameFaculty}, {grant}, {stringMark}";
         }
         public void AddingGrant(double bonusGrant) => grant += bonusGrant;
-        public void ChangingTheNameOfFaculty(object sender, EventArgs eventArgs)
+        public void ChangingTheNameOfFaculty(object? sender, EventArgs eventArgs)
         {
             if (sender is Faculty faculty)
                 nameFaculty = faculty.NameOfFaculty;
