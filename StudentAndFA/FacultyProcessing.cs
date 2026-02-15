@@ -30,5 +30,16 @@
                 phoneNumber[i] = partsOfPart[2];
             }
         }
+        public static Faculty[] CreatingFaculties(string[] deans, string[] nameOfFaculties, string[] phoneNumbers, ClassCollection<Student> students)
+        {
+            var teampArray = new Faculty[deans.Length];
+            for (int i = 0; i < deans.Length; i++)
+            {
+                var faculty = new Faculty(deans[i], nameOfFaculties[i], phoneNumbers[i], students);
+                teampArray[i] = faculty;
+            }
+            return teampArray;
+        }
+
     }
 }

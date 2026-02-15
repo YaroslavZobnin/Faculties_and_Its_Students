@@ -6,19 +6,14 @@
         private string? surname, nameFaculty;
         private double? grant;
         private uint[]? marks = new uint[5];
-        
+        private const string uk = "Неизвестно";
         public bool IsExcellentPupil
         {
            get
            {
-                if(marks != null)
-                {
-                    float res = 0;
-                    foreach (var mark in marks)
-                        res += mark;
-                    return res / 5 > 8 ? true : false;
-                }
-                throw new NullReferenceException("Нет оценок.");
+                if (AverageMark >= 8)
+                    return true;
+                else return false;
            }
         }
         public float AverageMark
@@ -49,8 +44,8 @@
         }
         public Student()
         {
-            surname = "Неизвестно";
-            nameFaculty = "ФАИС";
+            surname = uk;
+            nameFaculty = uk;
             grant = 0;
             marks = [0,0,0,0,0];
         }

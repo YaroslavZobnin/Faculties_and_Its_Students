@@ -27,6 +27,7 @@
             get { return phoneNumber; }
             set { phoneNumber = value ?? uk; }
         }
+        public Student[] Students => students; 
         public Faculty()
         {
             dean = uk;
@@ -59,12 +60,13 @@
         {
             if (student.NameFaculty == NameOfFaculty)
             {
-                students[hisIndex] = student;
-                Bonus += student.AddingGrant;
+                students[hisIndex++] = student;
+                if (student.IsExcellentPupil)
+                    Bonus += student.AddingGrant;
                 ChangeFacultyName += student.ChangingTheNameOfFaculty;
             }
             else
-                throw new ArgumentException("Вы пытаетесь подписать студента не к его факультету!");
+                throw new ArgumentException("Нельзя присвоить студента на чужой факультет!");
         }
     }
 }

@@ -17,7 +17,7 @@ namespace StudentAndFaculty
             }
             set
             {
-                if(index >= 0 && index <= array.Length)
+                if (index >= 0 && index <= array.Length)
                     array[index] = value;
             }
         }

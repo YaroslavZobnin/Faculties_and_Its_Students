@@ -36,6 +36,16 @@
                     uint.TryParse(stringMark[j], out marks[i][j]);
             }
         }
+        public static Student[] CreatingStudents(string[] surnames, string[] nameOfFaculties, double[] grants, uint[][] marks)
+        {
+            var tempArray = new Student[surnames.Length];
+            for (int i = 0; i < surnames.Length; i++)
+            {
+                var student = new Student(surnames[i], nameOfFaculties[i], grants[i], marks[i]);
+                tempArray[i] = student;
+            }
+            return tempArray;
+        }
 
     }
 }
